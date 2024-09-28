@@ -28,7 +28,7 @@ def emotion_detector(text_to_analyse):
                 'dominant_emotion': dominant_emotion_key
             }
             return result
-        else:
+        elif response.status_code == 400:
             return {
                 "anger": None,
                 "disgust": None,
